@@ -1,0 +1,23 @@
+<footer class="page-footer">
+      <div class="footer-copyright text-center py-3">© 2020 Copyright. All Rights Reserved
+    </div>
+</footer>
+<!--JavaScript-->
+<script src="/js/main.js"></script>
+<script src="/js/jquery.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+  const register = () => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => {
+          console.log('registered')
+        }).catch((err) => {
+        
+        });
+    }
+  }
+</script>
+</body>
+</html>

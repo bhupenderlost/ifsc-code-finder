@@ -1,0 +1,115 @@
+<%- include('includes/header.ejs') %>
+<div class="content container-fluid">
+    <!--IFSC CODE FORM START-->
+    <div class="container-fluid forms">
+        <% if (banks.length === 0) { %>
+        <h1>404 - Page Not Found</h1>
+        <script>document.title = "404 - Page Not Found";</script>
+        <% } else { %>
+        <div class="container-fuild find-ifsc">
+            <div class="container-fluid header-text">
+                <h1>Find IFSC Code</h1>
+                <p>Find Your Bank's IFSC Code</p>
+            </div>
+            
+            <form class="form-inline justify-content-center">
+                <div class="form-group">
+                    <label for="bank">Bank:</label>
+                    <select id="bank" class="form-control" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option>Select Your Bank</option>
+                        <% for (let bank of banks) { %>
+                        <option value="/<%= bank.bankName.replace(/\s/g, '-').toLowerCase() %>"><%= bank.bankName %></option>
+                        <% } %>
+                    </select>
+                </div>
+        
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <select id="state" class="form-control">
+                        <option>Select Your State</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="district">District:</label>
+                    <select id="district" class="form-control">
+                        <option>Select Your District</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="branch">Branch:</label>
+                    <select id="branch" class="form-control">
+                        <option>Select Your Branch</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+       
+            <% } %>
+    </div>
+    <!--IFSC CODE FORM END-->
+    
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-8 content">
+        <div class="results">
+        <h2>Find IFSC Codes, MICR Codes, Branch Details For 888+ Banks Operating In India.</h2>
+        <hr>
+        <h3 class="toggles" data-toggle="collapse" data-target="#collapseList" aria-expanded="false" aria-controls="collapseList"><i class="fa fa-plus" aria-hidden="true"></i> Full List Of 888+ Banks In India!</h3>
+        <ol  class="collapse ifsc-list" id="collapseList">
+        <% for (let bank of banks) { %>
+            <a href="/<%= bank.bankName.replace(/\s/g, '-').toLowerCase() %>">
+                <li><%= bank.bankName %></li>
+            </a>
+        <% } %>
+        </ol>
+        <hr>
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-5892264783067160"
+             data-ad-slot="2394733128"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <p>
+        <h2>How to find IFSC Code Of Your Bank?</h2><br>
+        <br>
+ Finding IFSC Code for your Branch of Your Bank could be so easy and convenient that you didn't even think. You need to use our tool for finding the IFSC Code, named IFSC Code Finder.<br>
+<h3>What is IFSC Code Finder?</h3><br>
+IFSC Code finder is the tool developed by us to find IFSC codes for all banks serving in India. We have used unique algorithms to find an accurate IFSC Code of your Bank' Branch. IFSC Code Finder also uses the factual data which we get from Reserve Bank Of India (RBI ) to serve you better.
+ Now you know about our tool and how it works now, let's dive into finding your bank's IFSC code.
+
+<h3>Finding IFSC Code</h3><br>
+For finding Your Bank's IFSC Code, you need to follow only four easy steps mentioned below:<br>
+<ol>
+ 	<li>You could see a bar of selecting options over there click on Select Your Bank, over there choose Your Bank as your bank. Once you have rechosen, you will redirect a new page.</li>
+ 	<li>After redirection, you will get asked for Selecting your State, click on Select Your State, over there choose your State where you have your Branch. Once you selected you will be again redirected to a new page.</li>
+ 	<li>After redirection, you will get asked for selecting your District, click on Select Your District, over there choose your District where you have your Branch. Once you decided, you will get redirected for the last time to a new page.</li>
+ 	<li>After redirection, you will get asked for selecting your Branch, click on Select Your Branch, over there choose your Branch where you have your account. After selecting, you will get the result shown with full details of your Branch in a table form.
+</li>
+</ol><br>
+Isn't it was very easy finding your bank's IFSC Code. You would have noticed one thing you could also trace down the exact address, contact numbers, email addresses, IFSC Code, MICR Code of your Your Bank's Branch. 
+</p>
+    <!--Ads -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5892264783067160"
+             data-ad-slot="7542391675"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!-- Ads End -->
+    </div>
+    
+                <%- include('includes/main.ejs') %>
+
+            </div>
+            <%- include('includes/sidebar.ejs') %>
+        </div>
+    </div>
+    
+</div>
+<%- include('includes/footer.ejs') %>

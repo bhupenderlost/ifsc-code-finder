@@ -1,0 +1,18 @@
+<div class="header-ifsc">
+    <div class="breadcrums">
+        <p><a href="/">Home</a></p>
+    </div>
+    <hr>
+    <div class="results">
+        <h3>List Of All Banks In <b>India</b></h3>
+        <hr>
+        <ol class="ifsc-list list-inline">
+        <% for (let bank of banks) { %>
+                <a href="<%= bank.bankName.replace(/\s/g, '-').toLowerCase() %>">
+                    <li><%= bank.bankName %></li>
+                </a>
+        <% } %>
+        </ol>
+    </div>
+    
+</div>

@@ -1,0 +1,61 @@
+<div class="header-ifsc">
+    <div class="breadcrums">
+        <p><a href="/">Home</a> | <a href="/<%= burl %>"><%= bank %></a> | <a href="/<%= burl %>/<%= surl %>"><%= state %></a></p>
+    </div>
+    <hr>
+        <!--Ads -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5892264783067160"
+             data-ad-slot="7542391675"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!-- Ads End -->
+    <div class="results">
+        <h2><b><%= state %>, <%= bank %></b> IFSC Codes, MICR Codes & All Branch Details.</h2>
+        <hr>
+        <h3><b><%= bank %></b> is available in following districts of <b><%= state %></b></h3>
+        <hr>
+        <ol class="ifsc-list list-inline">
+        <% for (let district of districts) { %>
+            <a href="<%= url %>/<%= district.bankDistrict.replace(/\s/g, '-').toLowerCase() %>">
+                <li><%= district.bankDistrict %></li>
+            </a>
+        <% } %>
+        </ol>
+        <hr>
+ 
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-5892264783067160"
+             data-ad-slot="2394733128"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <p>
+        <h2>How to find IFSC Code Of <%= bank %>, <%= state %>?</h2><br>
+        <br>
+ Finding IFSC Code for your Branch of <%= bank %>, <%= state %> could be so easy and convenient that you didn't even think. You need to use our tool for finding the IFSC Code, named IFSC Code Finder.<br>
+<h3>What is IFSC Code Finder?</h3><br>
+IFSC Code finder is the tool developed by us to find IFSC codes for all banks serving in India. We have used unique algorithms to find an accurate IFSC Code of <%= bank %>, <%= state %> Branch. IFSC Code Finder also uses the factual data which we get from Reserve Bank Of India (RBI ) to serve you better.
+ Now you know about our tool and how it works now, let's dive into finding your bank's IFSC code.
+<h3>Finding IFSC Code</h3><br>
+<br>
+For finding Your Bank's IFSC Code, you need to follow only four easy steps mentioned below:<br>
+<ol>
+ 	<li>You could see a bar of selecting options over there click on Select Your Bank, over there choose <%= bank %> as your bank. Once you have rechosen, you will redirect a new page.</li>
+ 	<li>After redirection, you will get asked for Selecting your State, click on Select Your State, over there choose your <%= state %> where you have your Branch. Once you selected you will be again redirected to a new page.</li>
+ 	<li>After redirection, you will get asked for selecting your District, click on Select Your District, over there choose your District where you have your Branch. Once you decided, you will get redirected for the last time to a new page.</li>
+ 	<li>After redirection, you will get asked for selecting your Branch, click on Select Your Branch, over there choose your Branch where you have your account. After selecting, you will get the result shown with full details of your Branch in a table form.
+</li>
+</ol><br>
+Isn't it was very easy finding <%= bank %>, <%= state %>'s IFSC Code. You would have noticed one thing you could also trace down the exact address, contact numbers, email addresses, IFSC Code, MICR Code of your <%= bank %>, <%= state %>'s Branch. 
+</p>
+    </div>
+    
+</div>

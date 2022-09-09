@@ -1,0 +1,159 @@
+<div class="header-ifsc">
+    <div class="breadcrums">
+        <p><a href="/">Home</a> | <a href="/<%= burl %>"><%= bank %></a> | <a href="/<%= burl %>/<%= surl %>"><%= state %></a> | <a href="/<%= burl %>/<%= surl %>/<%= durl %>"><%= district %></a> | <a href="/<%= burl %>/<%= surl %>/<%= durl %>/<%= bburl %>"><%= branch %></a></p>
+    </div>
+    <hr>
+    <div itemscope itemtype="http://schema.org/Article" class="results">
+        <h3 itemprop="name" ><b><%= bank %>, <%= branch %>, <%= district %>, <%= state %></b> IFSC Code, MICR Code & Branch Details</h3>
+        <hr>
+        <div class="table-responsive">
+            <ins class="adsbygoogle"
+                 style="display:block; text-align:center;"
+                 data-ad-layout="in-article"
+                 data-ad-format="fluid"
+                 data-ad-client="ca-pub-5892264783067160"
+                 data-ad-slot="2394733128"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <hr>
+            <table class="table table-bordered table-sm">
+                <% for (let ifsc of results) { %>
+                <tbody>
+                  <tr>
+                    <td class="head">Bank Name</td>
+                    <td class="body"><a href="/<%= burl %>"><%= bank %></a></td>
+                  </tr>
+                  <tr>
+                    <td class="head">IFSC Code</td>
+                    <td class="body"><%= ifsc.bankIFSC %></td>
+                  </tr>
+                  <tr>
+                    <td class="head">Branch Code</td>
+                    <td class="body"><%= ifsc.bankCode %></td>
+                  </tr>   
+                  <tr>
+                    <td class="head">MICR Code</td>
+                    <td class="body"><%= ifsc.bankMICR %></td>
+                  </tr>
+               
+                  <tr>
+                    <td class="head">Phone</td>
+                    <td class="body"><%= ifsc.bankPhone %></td>
+                  </tr>
+                  <tr>
+                    <td class="head">Email</td>
+                    <td class="body"><%= ifsc.bankEmail %></td>
+                  </tr>
+                  <tr>
+                    <td class="head">Branch</td>
+                    <td class="body"><%= branch %></td>
+                  </tr>
+                  <tr>
+                    <td class="head">District</td>
+                    <td class="body"><a href="/<%= burl %>/<%= surl %>/<%= durl %>"><%= district %></a></td>
+                  </tr>
+                  <tr>
+                    <td class="head">State</td>
+                    <td class="body"><a href="/<%= burl %>/<%= surl %>"><%= state %></a></td>
+                  </tr>
+                  <tr>
+                    <td class="head">Address</td>
+                    <td class="body"><%= ifsc.bankAddress %></td>
+                  </tr>
+                  <tr>
+                    <td class="head">Pincode</td>
+                    <td class="body"><%= ifsc.bankPincode %></td>
+                  </tr>            
+                  
+                </tbody>
+               
+                <% } %>
+              </table>
+             </div>
+          
+<!-- Bottom Result -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5892264783067160"
+     data-ad-slot="7542391675"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script> 
+          <div>
+            <p class="share">Share On:</p>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
+          <div class="article container">
+              <% for (let ifsc of results) { %>
+            <p itemprop="articleBody">
+              IFSC Codes are essential for transferring money across banks in India. So, here we got all the information about your search. IFSC Code For <%= bank %>, <%= branch %>, <%= district %>, <%= state %> is <b><%= ifsc.bankIFSC %></b>, the address is <b><%= ifsc.bankAddress %></b>, MICR code is <b><%= ifsc.bankMICR %></b>, contact Email Id is <b><%= ifsc.bankEmail %></b> and contact mobile number is <b><%= ifsc.bankPhone %></b>. 
+            </p>
+            <% } %>
+          </div>
+          <% for (let ifsc of results) { %>
+          <div class="questions">
+            <h4>
+              <b>QUE.</b> What is IFSC Code Of <%= bank %>, <%= branch %>, <%= district %>,<%= state %> ?
+            </h4>
+            <p><b>ANS.</b> IFSC Code of <%= bank %>, <%= branch %>, <%= district %>,<%= state %> is <b><%= ifsc.bankIFSC %></b></p>
+          </div>
+          <div class="questions">
+            <h4>
+              <b>QUE.</b> Where is <%= bank %>, <%= branch %>, <%= district %>,<%= state %> located ?
+            </h4>
+            <p> <b>ANS.</b> <%= bank %>, <%= branch %>, <%= district %>,<%= state %> is located at <b><%= ifsc.bankAddress %></b> </p>
+          </div>
+          <div class="questions">
+            <h4>
+              <b>QUE.</b> What is MICR Code For <%= bank %>, <%= branch %>, <%= district %>,<%= state %> ?
+            </h4>
+            <p><b>ANS.</b> MICR Code of <%= bank %>, <%= branch %>, <%= district %>,<%= state %> is <b><%= ifsc.bankMICR %></b></p>
+          </div>
+          <div class="questions">
+            <h4>
+              <b>QUE.</b> What contact mobile/phone number of <%= bank %>, <%= branch %>, <%= district %>,<%= state %> ?
+            </h4>
+            <p><b>ANS.</b> Contact mobile/phone number of <%= bank %>, <%= branch %>, <%= district %>,<%= state %> is <b><%= ifsc.bankPhone %></b></p>
+          </div>
+          <% } %>
+           <hr>
+            <!--Ads -->
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-5892264783067160"
+                         data-ad-slot="7542391675"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    <p>
+        <h2>How to find IFSC Code Of <%= bank %>, <%= branch %>, <%= district %>, <%= state %>?</h2><br>
+        <br>
+ Finding IFSC Code for your Branch of <%= bank %>, <%= branch %>, <%= district %>, <%= state %> could be so easy and convenient that you didn't even think. You need to use our tool for finding the IFSC Code, named IFSC Code Finder.<br>
+<h3>What is IFSC Code Finder?</h3><br>
+<br>
+IFSC Code finder is the tool developed by us to find IFSC codes for all banks serving in India. We have used unique algorithms to find an accurate IFSC Code of <%= bank %>, <%= branch %>, <%= district %>, <%= state %> Branch. IFSC Code Finder also uses the factual data which we get from Reserve Bank Of India (RBI ) to serve you better.
+ Now you know about our tool and how it works now, let's dive into finding your bank's IFSC code.
+<br>
+<br>
+<h3>Finding IFSC Code</h3><br>
+<br>
+For finding Your Bank's IFSC Code, you need to follow only four easy steps mentioned below:<br>
+<ol>
+ 	<li>You could see a bar of selecting options over there click on Select Your Bank, over there choose <%= bank %> as your bank. Once you have rechosen, you will redirect a new page.</li>
+ 	<li>After redirection, you will get asked for Selecting your State, click on Select Your State, over there choose your <%= state %> where you have your Branch. Once you selected you will be again redirected to a new page.</li>
+ 	<li>After redirection, you will get asked for selecting your District, click on Select Your District, over there choose <% district %> where you have your Branch. Once you decided, you will get redirected for the last time to a new page.</li>
+ 	<li>After redirection, you will get asked for selecting your Branch, click on Select Your Branch, over there choose <%= branch %> where you have your account. After selecting, you will get the result shown with full details of your Branch in a table form.
+</li>
+</ol><br>
+Isn't it was very easy finding <%= bank %>, <%= branch %>, <%= district %>, <%= state %>'s IFSC Code. You would have noticed one thing you could also trace down the exact address, contact numbers, email addresses, IFSC Code, MICR Code of your <%= bank %>, <%= branch %>, <%= district %>, <%= state %>'s Branch. 
+</p>
+      
+       
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<%- include('includes/header.ejs') %>
+<div class="content container-fluid">
+    <div class="container-fluid forms">
+        
+        <% if (states.length === 0) { %>
+        <h1>404 - Page Not Found</h1>
+        <script>document.title = "404 - Page Not Found";</script>
+        <% } else { %>
+        <div class="container-fluid find-ifsc">
+            <div class="container-fluid header-text">
+                <h1>Find IFSC Code</h1>
+                <p>Find Your Bank's IFSC Code</p>
+            </div>
+            <form class="form-inline justify-content-center">
+                <div class="form-group">
+                    <label for="bank">Bank:</label>
+                    <select id="bank" class="form-control">
+                        <option><%= bank %></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="state">States:</label>
+                    <select id="state" class="form-control" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+                        <option>Select Your State</option>
+                        <% for (let state of states) { %>
+                        <option value="<%= url %>/<%= state.bankState.replace(/\s/g, '-').toLowerCase() %>"><%= state.bankState %></option>
+                        <% } %>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="district">Districts:</label>
+                    <select id="district" class="form-control">
+                        <option>Select Your District</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="branch">Branches:</label>
+                    <select id="branch" class="form-control">
+                        <option>Select Your Branch</option>
+                    </select>
+                </div>
+            </form>
+           
+        </div>
+        <% } %>
+    </div>
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-8 content">
+                <%- include('includes/state.ejs') %>
+                    <!--Ads -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5892264783067160"
+             data-ad-slot="7542391675"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <!-- Ads End -->
+                <hr>
+                <%- include('includes/main.ejs') %>
+
+            </div>
+            <%- include('includes/sidebar.ejs') %>
+        </div>
+    </div>
+
+</div>
+<%- include('includes/footer.ejs') %>
