@@ -34,7 +34,7 @@ For support, email s.bhupender2401@gmail.com
 - Setup The Database
 - Run The App Using
 ```bash
-    npm app.js
+    node app.js
 ```
 
 ## Features
